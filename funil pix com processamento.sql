@@ -36,8 +36,9 @@ left join sms_messages_sent sent on sent.sms_bot_template_id = sms.id
 
 #where sms.deleted_at is null
 where sms_events.name like "%pix%"
+#and sms.deleted_at is null
 AND c.id not in (1,2,3,4,112,474, 1505,550, 683,997,1506,1703,1703,290,290,1551,1551,290,290,685,290,544,1551,1907,290,290,544,2815,290,544,544,1551,290,1551,290,5751,1508,2815)
 #and u.name like "%Diego Fernandes Spenciere%"
-and t.date between '2022-09-15 00:00:00' and '2022-10-15 23:59:59'    #curdate() - interval 1 month and curdate()
+and t.date between '2022-10-01 00:00:00' and '2022-10-31 23:59:59'    #curdate() - interval 1 month and curdate()
 
 group by u.id
